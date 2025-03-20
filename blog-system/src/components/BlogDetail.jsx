@@ -56,6 +56,14 @@ const BlogDetail = () => {
 
   // Handle like/unlike functionality
   const handleLikeClick = () => {
+    if (!user) {
+      setNotification({ 
+        message: 'Please login to like posts', 
+        type: 'error' 
+      });
+      return;
+    }
+
     if (hasLiked) {
       // User is unliking the post
       const updatedLikes = likeCount - 1;
@@ -145,13 +153,13 @@ const BlogDetail = () => {
         {/* Like button section */}
         <div className="like-section">
           <button 
-            className={`like-button ${hasLiked ? 'liked' : ''}`}
+            className={`like-button ${hasLiked ? 'liked' : ''} ${!user ? 'disabled' : ''}`}
             onClick={handleLikeClick}
-            aria-label={hasLiked ? 'Unlike post' : 'Like post'}
+            disabled={!user}
           >
-            {hasLiked ? '❤️' : '🤍'}
+            <span className="like-icon">❤️</span>
+            <span className="like-count">{likeCount}</span>
           </button>
-          <span>{likeCount} {likeCount === 1 ? 'like' : 'likes'}</span>
         </div>
 
         {/* Blog post content */}
