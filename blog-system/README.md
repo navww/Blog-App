@@ -52,7 +52,7 @@ yarn install
 ```bash
 npm run dev
 # or
-yarn start
+yarn run dev
 ```
 
 5. Open [http://localhost:5173/](http://localhost:5173/) in your browser.
