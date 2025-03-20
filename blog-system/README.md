@@ -67,7 +67,9 @@ blog-system/
 │   │   ├── BlogDetail.jsx
 │   │   ├── Login.jsx
 │   │   ├── Register.jsx
-│   │   └── Toast.jsx
+│   │   ├── Toast.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── PrivateRoute.jsx
 │   ├── context/
 │   │   └── AuthContext.jsx
 │   ├── styles.css
