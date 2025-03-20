@@ -33,7 +33,7 @@ A feature-rich blog application built with React that allows users to read, like
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/navww/blog-app.git
+git clone https://github.com/navww/Blog-App.git
 ```
 
 2. Navigate to the project directory:
